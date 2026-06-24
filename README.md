@@ -1,5 +1,8 @@
 # Google Chat Markdown Preview
 
+<img width="1745" height="944" alt="image" src="https://github.com/user-attachments/assets/c781f22c-169a-409d-9dd0-b5cad0faf0b0" />
+
+
 A cross-browser (Chrome + Firefox, MV3) extension that adds inline preview
 support for `.md` / `.markdown` attachments in Google Chat. Google ships
 preview for its own formats (Docs, Sheets, Slides) but not for markdown, so
