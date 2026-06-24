@@ -31,7 +31,7 @@ view, and copy/download buttons. No download, no external site.
 
 ## Build
 
-Requirements: Node 18+ and [`aube`](https://npmjs.com/package/aube) (or npm).
+Requirements: Node 18+ and [`aube`](https://www.npmjs.com/package/@endevco/aube) (or npm).
 
 ```bash
 aube install
