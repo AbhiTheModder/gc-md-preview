@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GC Markdown Preview</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Chat Markdown Preview</h1>
+    <span id="version" class="version">v0.1.0</span>
+  </header>
+
+  <main>
+    <label class="row">
+      <span class="label">Enabled</span>
+      <input type="checkbox" id="enabled" class="switch">
+    </label>
+
+    <label class="row">
+      <span class="label">Theme</span>
+      <select id="theme">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+
+    <label class="row">
+      <span class="label">Default view</span>
+      <select id="defaultView">
+        <option value="rendered">Rendered</option>
+        <option value="raw">Raw</option>
+      </select>
+    </label>
+
+    <label class="row">
+      <span class="label">Preview button visible</span>
+      <input type="checkbox" id="showEyeButton" class="switch">
+    </label>
+  </main>
+
+  <footer>
+    <button id="openOptions" class="link-btn">Open full settings…</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

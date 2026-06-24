@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Chat Markdown Preview — Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header>
+    <h1>Google Chat Markdown Preview</h1>
+    <p class="tagline">Preview <code>.md</code> attachments inline in Google Chat.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>General</h2>
+
+      <label class="row">
+        <div>
+          <div class="label">Enable extension</div>
+          <div class="hint">Master switch. When off, no preview buttons are injected.</div>
+        </div>
+        <input type="checkbox" id="enabled" class="switch">
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Show preview button</div>
+          <div class="hint">Inject an eye-icon button on each markdown chip. Off = double-click the chip instead (coming soon).</div>
+        </div>
+        <input type="checkbox" id="showEyeButton" class="switch">
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Preview</h2>
+
+      <label class="row">
+        <div>
+          <div class="label">Theme</div>
+          <div class="hint">Auto follows Chat's dark/light mode, falling back to OS preference.</div>
+        </div>
+        <select id="theme">
+          <option value="auto">Auto</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Default view</div>
+          <div class="hint">Which tab is active when the modal opens.</div>
+        </div>
+        <select id="defaultView">
+          <option value="rendered">Rendered</option>
+          <option value="raw">Raw</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Syntax highlighting</div>
+          <div class="hint">Auto-detect language in fenced code blocks via highlight.js.</div>
+        </div>
+        <input type="checkbox" id="autoLanguage" class="switch">
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Show copy button</div>
+          <div class="hint">Adds a copy-to-clipboard button in the modal header.</div>
+        </div>
+        <input type="checkbox" id="copyButton" class="switch">
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Max file size (KB)</div>
+          <div class="hint">Files larger than this show a "too large" notice and download instead. Default: 500.</div>
+        </div>
+        <input type="number" id="maxBytes" min="1" max="10240" step="1">
+      </label>
+
+      <label class="row">
+        <div>
+          <div class="label">Enable debug logging</div>
+          <div class="hint">Print diagnostic logs to the page console (F12). Useful for troubleshooting. Off by default.</div>
+        </div>
+        <input type="checkbox" id="debugLogging" class="switch">
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>File extensions</h2>
+      <p class="hint">Comma-separated list of extensions to preview (without the dot).</p>
+      <input type="text" id="extensions" class="ext-input" placeholder="md, markdown, mdown, mkd">
+      <div id="extError" class="error"></div>
+    </section>
+
+    <div class="actions">
+      <button id="save" class="primary">Save</button>
+      <span id="saved" class="saved" hidden>Saved ✓</span>
+    </div>
+
+    <section class="card about">
+      <h2>About</h2>
+      <p>Version <span id="version">0.1.0</span></p>
+      <p class="hint">All processing happens locally in your browser. File contents are fetched directly from Google Chat's attachment URL using your existing session cookies. Nothing is sent to any third-party server.</p>
+      <p><a href="https://github.com/AbhiTheModder/gc-md-preview/issues" target="_blank" rel="noopener">Report an issue</a></p>
+      <p class="credit">Built with ⌨️, 🖱️ &amp; ❤️ by <a href="https://github.com/AbhiTheModder" target="_blank" rel="noopener">Abhi</a></p>
+    </section>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>
