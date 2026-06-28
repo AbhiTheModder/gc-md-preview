@@ -1,5 +1,7 @@
 # Google Chat Markdown Preview
 
+[![Get the Add-on](https://blog.mozilla.org/addons/files/2015/11/get-the-addon-small.png)](https://addons.mozilla.org/addon/google-chat-markdown-preview/)
+
 <img width="1745" height="944" alt="image" src="https://github.com/user-attachments/assets/c781f22c-169a-409d-9dd0-b5cad0faf0b0" />
 
 
